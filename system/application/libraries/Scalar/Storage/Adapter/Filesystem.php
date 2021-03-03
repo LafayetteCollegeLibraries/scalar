@@ -287,7 +287,7 @@ class Scalar_Storage_Adapter_Filesystem implements Scalar_Storage_Adapter_Adapte
         if (!is_writable($destDir)) {
             throw new Scalar_Storage_Exception("Destination is not writable: '$destDir'.");
         }
-        return rename($source, $dest);
+        return move_uploaded_file($source, $dest);
     }
 
     /**
